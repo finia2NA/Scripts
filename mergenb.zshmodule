@@ -1,0 +1,5 @@
+function mergenb(){
+  pip install -U nbmerge
+  rm -f merged.ipynb
+  nbmerge $(ls -1 *.ipynb | grep -v Sheet) > merged.ipynb
+}
