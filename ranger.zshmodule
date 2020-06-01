@@ -1,0 +1,16 @@
+#This is based on: https://github.com/ranger/ranger/blob/master/examples/bash_automatic_cd.sh
+#Paste this into your .zshrc:
+
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi  
+    rm -f -- "$tempfile"
+}
+
+
+bindkey -s '^O' 'ranger-cd\n'
+#ranger-cd will fire for Ctrl+O

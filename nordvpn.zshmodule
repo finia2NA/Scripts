@@ -1,0 +1,6 @@
+alias vpnc="nordvpn connect Germany"
+alias vpnu="nordvpn connect United_States"
+alias vpnd="nordvpn disconnect"
+alias vpnk="nordvpn set killswitch enabled"
+alias vpnn="nordvpn set killswitch disabled"
+alias vpns="nordvpn status"

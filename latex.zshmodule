@@ -1,0 +1,10 @@
+function rmltex {
+  exts=(aux bbl dvi blg brf idx ilg ind lof log lol lot out toc synctex.gz fdb_latexmk fls)
+  for ext in $exts; do
+      rm -f *.$ext 1> /dev/null 2> /dev/null
+  done
+}
+
+function texbuild {
+    latexmk $1 && rmltex
+}
