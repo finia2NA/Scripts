@@ -1,0 +1,5 @@
+function tmpcode {
+  # run new code instance in a temporary location
+  TMP=$(mktemp -d)
+  code -nw ${TMP} # we have to wait here to ensure our tempdir stays alive
+}
