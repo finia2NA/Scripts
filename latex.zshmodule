@@ -3,6 +3,9 @@ function rmltex {
   for ext in $exts; do
       rm -f *.$ext 1> /dev/null 2> /dev/null
   done
+
+  # rm this sneaky boi
+  rm -f __latexindent_temp.tex 1> /dev/null 2> /dev/null
 }
 
 function texbuild {
