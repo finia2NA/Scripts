@@ -8,3 +8,6 @@ do
     source $file
 done
 ```
+
+# Updating
+You can update your local copy of my scripts by running `update-zshmodules`
