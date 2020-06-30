@@ -1,0 +1,5 @@
+function update-zshmodules {
+  cd ~/.zshmodules
+  git pull
+  cd - 1> /dev/null
+}
