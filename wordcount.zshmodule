@@ -1,1 +1,2 @@
-alias wca="wc -w $(ls -1)"
+# alias wca="wc -w $(ls -1)"
+# TODO: FIX

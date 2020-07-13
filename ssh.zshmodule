@@ -1,0 +1,3 @@
+function sshosts () {
+  ssh $(grep -P "^Host ([^*]+)$" $HOME/.ssh/config | sed 's/Host //' | dmenu -l 16 )
+}
