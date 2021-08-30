@@ -1,3 +1,5 @@
 alias ll="ls -la"
 
 alias makedir="mkdir"
+
+alias fixpulse="systemctl --user restart pulseaudio"

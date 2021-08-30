@@ -1,5 +1,5 @@
 function zhistory {
-  $(cut -c16- ~/.zsh_history | grep -v 'zhistory' | tac | dmenu -l 16)
+  $(cut -c16- ~/.zsh_history | grep -v 'zhistory' | tac | dmenu -l 16 -fn "NotoSansMono-Thin")
 }
 
 bindkey -s '^h' 'zhistory\n'

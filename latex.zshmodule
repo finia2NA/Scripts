@@ -1,5 +1,5 @@
 function rmltex {
-  exts=(aux bbl dvi blg brf idx ilg ind lof log lol lot out toc synctex.gz fdb_latexmk fls)
+  exts=(aux bbl blg brf idx ilg ind lof log lol lot out toc snm nav synctex.gz fdb_latexmk fls dvi)
   for ext in $exts; do
       rm -f *.$ext 1> /dev/null 2> /dev/null
   done
@@ -8,8 +8,8 @@ function rmltex {
   rm -f __latexindent_temp.tex 1> /dev/null 2> /dev/null
 }
 
-function texbuild {
-    latexmk $1 && rmltex
+function texmk {
+    latexmk -pdf $1 && rmltex
 }
 
 

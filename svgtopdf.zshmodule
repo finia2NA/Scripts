@@ -1,0 +1,3 @@
+svg2pdf() {
+  inkscape -D $1  -o $($1 | rev | cut -c 5- | rev).pdf --export-latex
+}

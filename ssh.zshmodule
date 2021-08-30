@@ -1,3 +1,14 @@
 function sshosts () {
   ssh $(grep -P "^Host ([^*]+)$" $HOME/.ssh/config | sed 's/Host //' | dmenu -l 16 )
 }
+
+function myip () {
+  ip addr show wlp2s0| grep 'inet ' | awk '{print $2}' | cut -f1 -d'/'
+}
+
+function sshup () {
+  print "You may need to edit this function to configure your network device"
+  host= nmap -p 22 --open -sV $(myip)/24 | awk '/is up/ {print up}; {gsub (/\(|\)/,""); up = $NF}' | dmenu -l 16
+  
+  ssh $(echo $host)
+}

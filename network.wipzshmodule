@@ -1,0 +1,2 @@
+alias myip="cat $(ip -4 addr | grep -o '[1-9].*/24') /24"
+alias subnet="nmap -sL $(myip)"

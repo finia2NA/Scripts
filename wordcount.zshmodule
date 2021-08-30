@@ -1,2 +1,4 @@
-# alias wca="wc -w $(ls -1)"
+# function wca () {
+#  wc -w $(ls -1)
+# }
 # TODO: FIX
